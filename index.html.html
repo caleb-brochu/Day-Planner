@@ -20,6 +20,8 @@
     />
     <link rel="stylesheet" href="style/style.css" />
     <title>Work Day Scheduler</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </head>
 
   <body>
@@ -34,67 +36,68 @@
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
           <span class="input-group-append time-block hour justify-content-center">9AM</span>
         </div>
-        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="9AM"></textarea>
-        <button class = "saveBtn col-md-1 col-sm-1 col-1"><i class="fa fa-save"></i></button>
+        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="9"></textarea>
+        <button class = "saveBtn col-md-1 col-sm-1 col-1" value ="9"><i class="fa fa-save"></i></button>
       </div>
       <div class="row">
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
           <span class="input-group-append time-block hour justify-content-center">10AM</span>
         </div>
-        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="10AM"></textarea>
-        <button class = "saveBtn col-md-1 col-sm-1 col-1"><i class="fa fa-save"></i></button>
+        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="10"></textarea>
+        <button class = "saveBtn col-md-1 col-sm-1 col-1" value ="10"><i class="fa fa-save"></i></button>
       </div>
       <div class="row">
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
           <span class="input-group-append time-block hour justify-content-center">11AM</span>
         </div>
-        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="11AM"></textarea>
-        <button class = "saveBtn col-md-1 col-sm-1 col-1"><i class="fa fa-save"></i></button>
+        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="11"></textarea>
+        <button class = "saveBtn col-md-1 col-sm-1 col-1" value ="11"><i class="fa fa-save"></i></button>
       </div>
       <div class="row">
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
           <span class="input-group-append time-block hour justify-content-center">12PM</span>
         </div>
-        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="12PM"></textarea>
-        <button class = "saveBtn col-md-1 col-sm-1 col-1"><i class="fa fa-save"></i></button>
+        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="12"></textarea>
+        <button class = "saveBtn col-md-1 col-sm-1 col-1" value ="12"><i class="fa fa-save"></i></button>
       </div>
       <div class="row">
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
           <span class="input-group-append time-block hour justify-content-center">1PM</span>
         </div>
-        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="1PM"></textarea>
-        <button class = "saveBtn col-md-1 col-sm-1 col-1"><i class="fa fa-save"></i></button>
+        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="13"></textarea>
+        <button class = "saveBtn col-md-1 col-sm-1 col-1" value ="1"><i class="fa fa-save"></i></button>
       </div>
       <div class="row">
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
           <span class="input-group-append time-block hour justify-content-center">2PM</span>
         </div>
-        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="2PM"></textarea>
-        <button class = "saveBtn col-md-1 col-sm-1 col-1"><i class="fa fa-save"></i></button>
+        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="14"></textarea>
+        <button class = "saveBtn col-md-1 col-sm-1 col-1" value ="2"><i class="fa fa-save"></i></button>
       </div>
       <div class="row">
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
           <span class="input-group-append time-block hour justify-content-center">3PM</span>
         </div>
-        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="3PM"></textarea>
-        <button class = "saveBtn col-md-1 col-sm-1 col-1"><i class="fa fa-save"></i></button>
+        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="15"></textarea>
+        <button class = "saveBtn col-md-1 col-sm-1 col-1" value ="3"><i class="fa fa-save"></i></button>
       </div>
       <div class="row">
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
           <span class="input-group-append time-block hour justify-content-center">4PM</span>
         </div>
-        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="4PM"></textarea>
-        <button class = "saveBtn col-md-1 col-sm-1 col-1"><i class="fa fa-save"></i></button>
+        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="16"></textarea>
+        <button class = "saveBtn col-md-1 col-sm-1 col-1" value ="4"><i class="fa fa-save"></i></button>
       </div>
       <div class="row">
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
           <span class="input-group-append time-block hour justify-content-center">5PM</span>
         </div>
-        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="5PM"></textarea>
-        <button class = "saveBtn col-md-1 col-sm-1 col-1"><i class="fa fa-save"></i></button>
+        <textarea class="col-lg-10 col-md-10 col-sm-9 col-9" value="17"></textarea>
+        <button class = "saveBtn col-md-1 col-sm-1 col-1" value ="5"><i class="fa fa-save"></i></button>
       </div>
+      
+      <script src="script/script.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    
   </body>
 </html>
