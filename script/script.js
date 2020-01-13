@@ -1,67 +1,89 @@
 
-$(document).ready(function () {
+$(document).ready(function () 
+{
    
     // Time in Month Day, Year - set in header 
     $('#currentDay').text(moment().format('LL')); 
-    console.log(moment().format("HH"));
     
+    // Gets object from local storage.
+    let todoArray = JSON.parse(localStorage.getItem("todoArray")) || [];
+
+    //Set textarea values here.
+    $('textarea').each(function()
+    {
+        
+        let textContent =  parseInt($(this).attr("value")); 
+        
+        switch(textContent)
+        {
+            case 9:
+                $(this).html(todoArray[0])
+                break;
+            case 10:
+                $(this).html(todoArray[1])
+                break;
+            case 11:
+                $(this).html(todoArray[2])
+                break;
+            case 12:
+                $(this).html(todoArray[3])
+                break;
+            case 13:
+                $(this).html(todoArray[4])
+                break;
+            case 14:
+                $(this).html(todoArray[5])
+                break;
+            case 15:
+                $(this).html(todoArray[6])
+                break;  
+            case 16:
+                $(this).html(todoArray[7])
+                break;
+            case 17:
+                $(this).html(todoArray[8])
+                break;           
+        }
+    });
     
-//     let todos = JSON.parse(localStorage.getItem("todos")) || [];
-
-
-//   for (var i = 0; i < scores.length; i++) {
-//     var score = scores[i];
-
-//     var li = document.createElement("li");
-
-//     li.textContent = score;
-//     highscores.appendChild(li);
-//   }
-
-  let todoArray = [];
-  console.log($('textarea').attr("value","9").text());
     //need to append content to an array stored in local storage
-    $(".saveBtn").click(function(){
+    $(".saveBtn").click(function()
+    {
+        
         let save = parseInt($(this).attr("value"));
-        switch(save){
+        
+        switch(save)
+        {
             case 9:
                 todoArray[0] = $(this).prev().attr("value","9").val();
-                console.log("9am")
                 break;
             case 10:
                 todoArray[1] = $(this).prev().attr("value","10").val();
-                console.log("10am")
                 break;
             case 11:
                 todoArray[2] = $(this).prev().attr("value","11").val();
-                console.log("11am")
                 break;
             case 12:
                 todoArray[3] = $(this).prev().attr("value","12").val();
-                console.log("12pm")
                 break;
             case 1:
-                todoArray[4] = $(this).prev().attr("value","1").val();
-                console.log("1pm")
+                todoArray[4] = $(this).prev().attr("value","13").val();
                 break;
             case 2:
-                todoArray[5] = $(this).prev().attr("value","2").val();
-                console.log("2pm")
+                todoArray[5] = $(this).prev().attr("value","14").val();
                 break;
             case 3:
-                todoArray[6] = $(this).prev().attr("value","3").val();
-                console.log("3pm")
+                todoArray[6] = $(this).prev().attr("value","15").val();
                 break;    
             case 4:
-                todoArray[7] = $(this).prev().attr("value","4").val();
-                console.log("4pm")
+                todoArray[7] = $(this).prev().attr("value","16").val();
                 break; 
             case 5:
-                todoArray[8] = $(this).prev().attr("value","5").text();
-                console.log("5pm")
+                todoArray[8] = $(this).prev().attr("value","17").val();
                 break;            
         }
-        console.log(todoArray);
+        // Save todosArray to local storage here.
+        localStorage.setItem('todoArray', JSON.stringify(todoArray));
     });
 
     let currentHour = moment().format("HH");
@@ -69,18 +91,20 @@ $(document).ready(function () {
     $("textarea").each(function(index) {
         
         let planerHour = parseInt($(this).attr("value"))
-        if (planerHour == currentHour){
+       
+        if (planerHour == currentHour)
+        {
             $(this).addClass("present");
         }
-        else if (planerHour > currentHour){
+        else if (planerHour > currentHour)
+        {
             $(this).addClass("future");
         }
-        else{
+        else
+        {
             $(this).addClass("past");
         };
     });
-
-
 });
 
 
